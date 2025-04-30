@@ -1,4 +1,4 @@
-# peer-review-mcp
+# Peer Review MCP
 An MCP tool set that enables AI agents to collaborate with other LLMs. The AI agent can request assistance or feedback from more capable models when it needs to evaluate its plans or when it gets stuck on a problem.
 
 ## Installation
