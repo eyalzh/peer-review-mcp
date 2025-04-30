@@ -1,6 +1,20 @@
 # Peer Review MCP
 An MCP tool set that enables AI agents to collaborate with other LLMs. The AI agent can request assistance or feedback from more capable models when it needs to evaluate its plans or when it gets stuck on a problem.
 
+## Tools
+
+- **ask-expert-for-peer-review**
+  - Ask an expert to peer review your plan. Provide the problem you are working on, and your detailed plan as well as any other context.
+  - Input:
+      - `problem` (string): The problem you are working on.
+      - `plan` (string): The plan you have created.
+
+- **ask-expert-for-help**
+  - When confronting a challenging problem, seek guidance from an expert. Specify the problem and the issue you are having, as well as any other context.
+  - Input:
+      - `problem` (string): The problem you are trying to solve.
+      - `issue` (string): The issue you are having.
+
 ## Installation
 
 Build the server by running the following command in the root directory of the repository:

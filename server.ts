@@ -10,7 +10,7 @@ const mcpServer = new McpServer({
 
 mcpServer.tool(
   "ask-expert-for-peer-review",
-  "Ask an expert to peer review your plan. Provide the problem you are working on, and your detailed plan as well as any other context",
+  "Ask an expert to peer review your plan. Provide the problem you are working on, and your detailed plan as well as any other context.",
   { problem: z.string(), plan: z.string() },
   async ({ problem, plan }) => {
     const prompt = `
@@ -41,7 +41,7 @@ mcpServer.tool(
 
 mcpServer.tool(
   "ask-expert-for-help",
-  "When you are facing a problem that you are having a difficulty with, consult with an expert about a solution. Specify the problem and the issue you are having, as well as any other context.",
+  "When confronting a challenging problem, seek guidance from an expert. Specify the problem and the issue you are having, as well as any other context.",
   { problem: z.string(), issue: z.string() },
   async ({ problem, issue }) => {
     const prompt = `I am facing the following problem: 
