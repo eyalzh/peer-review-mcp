@@ -52,7 +52,7 @@ For more information on how to configure the MCP server in Claude Dekstop, pleas
 
 ## Supported Helper Models
 
-This is work in progress. Currently, the following models are supported as helper models:
+Currently, the following models are supported as helper models:
 - **claude-3-7-sonnet-20250219** (Claude Sonnet 3.7)
 - **gemini-2.5-flash-preview-04-17** (Gemini 2.5 Flash)
 - **gemini-2.5-pro-preview-03-25** (Gemini 2.5 Pro)
