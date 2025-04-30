@@ -17,7 +17,7 @@ An MCP tool set that enables AI agents to collaborate with other LLMs. The AI ag
 
 ## Installation
 
-Build the server by running the following command in the root directory of the repository:
+Run the following commands in the root directory of the repository:
 
 ```bash
 npm ci
