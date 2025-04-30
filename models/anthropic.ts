@@ -1,14 +1,14 @@
 import type { ModelCallerFunc } from "./factory";
 import Anthropic from "@anthropic-ai/sdk";
 
-export function getAnthropicCaller(apiKey: string): ModelCallerFunc {
+export function getAnthropicCaller(anthropicModel: string, apiKey: string): ModelCallerFunc {
   return async (prompt: string) => {
     const anthropic = new Anthropic({
       apiKey: apiKey,
     });
 
     const msg = await anthropic.messages.create({
-      model: "claude-3-7-sonnet-20250219",
+      model: anthropicModel,
       max_tokens: 10000,
       messages: [{ role: "user", content: prompt }],
       // TBD: support thinking mode

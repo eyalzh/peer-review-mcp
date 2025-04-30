@@ -1,10 +1,13 @@
 import { getAnthropicCaller } from "./anthropic";
+import { getGoogleGenAICaller } from "./google";
 
 export const SUPPOERTED_MODELS = [
-    "claude-3-7-sonnet-20250219",
+  "claude-3-7-sonnet-20250219",
+  "gemini-2.5-flash-preview-04-17",
+  "gemini-2.5-pro-preview-03-25",
 ] as const;
 
-export type SupportedModel = typeof SUPPOERTED_MODELS[number];
+export type SupportedModel = (typeof SUPPOERTED_MODELS)[number];
 
 export type ModelCallerFunc = (prompt: string) => Promise<string>;
 
@@ -14,7 +17,10 @@ export function getModelCaller(
 ): ModelCallerFunc {
   switch (model) {
     case "claude-3-7-sonnet-20250219":
-      return getAnthropicCaller(apiKey);
+      return getAnthropicCaller("claude-3-7-sonnet-20250219", apiKey);
+    case "gemini-2.5-flash-preview-04-17":
+    case "gemini-2.5-pro-preview-03-25":
+      return getGoogleGenAICaller(model, apiKey);
     default:
       const _exhaustiveCheck: never = model;
       throw new Error(`Unsupported model: ${model}`);

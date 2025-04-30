@@ -1,8 +1,6 @@
 # peer-review-mcp
 An MCP tool set that enables AI agents to collaborate with other LLMs. The AI agent can request assistance or feedback from more capable models when it needs to evaluate its plans or when it gets stuck on a problem.
 
-This is work in progress. It only supports Claude 3.7 as the helper model for now.
-
 ## Installation
 
 Build the server by running the following command in the root directory of the repository:
@@ -23,7 +21,7 @@ Then, add the following configuration the the MCP servers configuration file:
                 "/path/to/repo/dist/server.js"
             ],
             "env": {
-                "HELPER_MODEL": "claude-3-7-sonnet-20250219",
+                "HELPER_MODEL": "...",
                 "HELPER_MODEL_API_KEY": "sk..."
             }
         }
@@ -32,5 +30,15 @@ Then, add the following configuration the the MCP servers configuration file:
 ```
 
 Replace `/path/to/repo` with the correct path.
+Add the helper model (see list below) and the API key.
 
 Make sure to restart the MCP client (e.g. Claude Desktop) for the changes to take effect.
+
+For more information on how to configure the MCP server in Claude Dekstop, please refer to the [MCP documentation for Claude Desktop Users](https://modelcontextprotocol.io/quickstart/user)
+
+## Supported Helper Models
+
+This is work in progress. Currently, the following models are supported as helper models:
+- **claude-3-7-sonnet-20250219** (Claude Sonnet 3.7)
+- **gemini-2.5-flash-preview-04-17** (Gemini 2.5 Flash)
+- **gemini-2.5-pro-preview-03-25** (Gemini 2.5 Pro)
