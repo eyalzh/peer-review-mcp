@@ -36,7 +36,7 @@ Then, add the following configuration to the MCP servers configuration file:
             ],
             "env": {
                 "HELPER_MODEL": "...",
-                "HELPER_MODEL_API_KEY": "sk..."
+                "HELPER_MODEL_API_KEY": "..."
             }
         }
     }
