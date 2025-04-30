@@ -1,0 +1,23 @@
+{
+  "name": "peer-review-mcp",
+  "version": "1.0.0",
+  "description": "This MCP tool lets AI agents ask for assistance or feedback from more capable models",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "keywords": [
+    "mcp"
+  ],
+  "author": "eyalzh@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.40.1",
+    "@modelcontextprotocol/sdk": "^1.10.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3"
+  }
+}
