@@ -24,7 +24,7 @@ npm ci
 npm run build
 ```
 
-Then, add the following configuration the the MCP servers configuration file:
+Then, add the following configuration to the MCP servers configuration file:
 
 ```
 {
